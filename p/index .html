@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CyberCraft Labs - Cyberpunk Hardware Store</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts & Chart.js -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <span>⚡ FAST NATIONWIDE DELIVERY</span>
+    <span>•</span>
+    <span>EASYPAISA & COD ACCEPTED: 03015228759</span>
+    <span>•</span>
+    <span>100% QUALITY TESTED HARDWARE</span>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">CYBER<span>CRAFT</span></div>
+    <nav>
+      <a href="#home" class="nav-link active" onclick="switchPage('home')">HOME</a>
+      <a href="#products" class="nav-link" onclick="switchPage('products')">STORE</a>
+      <a href="#orders" class="nav-link highlight-nav" onclick="switchPage('orders')"><i class="fa-solid fa-chart-line"></i> ORDERS</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://wa.me/923015228759" target="_blank" class="nav-wa-btn">
+        <i class="fa-brands fa-whatsapp"></i> 03015228759
+      </a>
+    </div>
+  </header>
+
+  <!-- STORE VIEW -->
+  <div id="page-store">
+    <!-- Mega Offer Banner -->
+    <div class="mega-offer-banner">
+      <div class="offer-content">
+        <span class="fire-emoji">🔥</span>
+        <h2>FLAT 25% OFF — WHOLESALE LIMITED STOCK</h2>
+        <p>SPECIAL WHOLESALE RATES APPLIED ON ALL HARDWARE!</p>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fa-solid fa-shield-halved"></i> RATED #1 HARDWARE STORE IN PAKISTAN</div>
+        <h1>NEXT-GEN HARDWARE. <span>BUILT FOR EXPERTS.</span></h1>
+        <p>Get your hands on custom Flipper Zero DIY tools, Bruce Firmware ESP32 Suites, and Marauder Analyzers with instant WhatsApp ordering.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn-primary">EXPLORE STORE <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="https://wa.me/923015228759" target="_blank" class="btn-secondary"><i class="fa-brands fa-whatsapp"></i> CHAT ON WHATSAPP</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+      <div class="section-header">
+        <span class="sub-title">FEATURED PRODUCTS</span>
+        <h2 class="section-title">EXCLUSIVE <span>HARDWARE DEALS</span></h2>
+      </div>
+      
+      <div class="product-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="discount-tag">25% OFF</span>
+            <span class="stock-badge">WHOLESALE PRICE</span>
+          </div>
+          <div class="product-img">
+            <img src="ping(1).png" alt="Flipper Zero DIY" onerror="this.src='ping(1).jpg'">
+          </div>
+          <div class="product-info">
+            <h3>Flipper Zero DIY Multi-Tool</h3>
+            <p class="desc">Compact multi-tool for Sub-1GHz, RFID, NFC, and IR hardware testing.</p>
+            <div class="price-box">
+              <span class="old-price">Rs. 106,667</span>
+              <span class="new-price">Rs. 80,000</span>
+            </div>
+            <button class="btn-buy" onclick="openCheckoutModal('Flipper Zero DIY Multi-Tool', 80000)">
+              <i class="fa-solid fa-bolt"></i> BUY NOW
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="discount-tag">25% OFF</span>
+            <span class="stock-badge">LIMITED STOCK</span>
+          </div>
+          <div class="product-img">
+            <img src="ping(2).png" alt="Bruce Firmware Device" onerror="this.src='ping(2).jpg'">
+          </div>
+          <div class="product-info">
+            <h3>Bruce Firmware ESP32 Suite</h3>
+            <p class="desc">High-gain antenna module running Bruce firmware with dynamic shark display UI.</p>
+            <div class="price-box">
+              <span class="old-price">Rs. 66,667</span>
+              <span class="new-price">Rs. 50,000</span>
+            </div>
+            <button class="btn-buy" onclick="openCheckoutModal('Bruce Firmware ESP32 Suite', 50000)">
+              <i class="fa-solid fa-bolt"></i> BUY NOW
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card">
+          <div class="card-badges">
+            <span class="discount-tag">25% OFF</span>
+            <span class="stock-badge">LIMITED STOCK</span>
+          </div>
+          <div class="product-img">
+            <img src="ping(3).png" alt="ESP32 Marauder Tool" onerror="this.src='ping(3).jpg'">
+          </div>
+          <div class="product-info">
+            <h3>ESP32 Marauder Router Analyzer</h3>
+            <p class="desc">Portable Wi-Fi/Bluetooth packet monitor, sniffer, and network analysis tool.</p>
+            <div class="price-box">
+              <span class="old-price">Rs. 40,000</span>
+              <span class="new-price">Rs. 30,000</span>
+            </div>
+            <button class="btn-buy" onclick="openCheckoutModal('ESP32 Marauder Router Analyzer', 30000)">
+              <i class="fa-solid fa-bolt"></i> BUY NOW
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ORDERS & ANALYTICS DASHBOARD VIEW -->
+  <div id="page-orders" style="display: none;" class="dashboard-container">
+    <div class="dash-header">
+      <h2><i class="fa-solid fa-chart-line"></i> SHOPIFY-STYLE ORDERS ANALYTICS</h2>
+      <p>Live order trends, weekly sales performance, and customer order management.</p>
+    </div>
+
+    <!-- Analytics Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <i class="fa-solid fa-cart-shopping stat-icon cyan"></i>
+        <div>
+          <span class="stat-title">TOTAL ORDERS</span>
+          <h3 id="stat-total-orders">0</h3>
+        </div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-money-bill-wave stat-icon green"></i>
+        <div>
+          <span class="stat-title">TOTAL REVENUE</span>
+          <h3 id="stat-total-revenue">Rs. 0</h3>
+        </div>
+      </div>
+      <div class="stat-card">
+        <i class="fa-solid fa-clock stat-icon gold"></i>
+        <div>
+          <span class="stat-title">PENDING ORDERS</span>
+          <h3 id="stat-pending-orders">0</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Dynamic Sales Graph -->
+    <div class="chart-container-box">
+      <h3><i class="fa-solid fa-chart-area"></i> WEEKLY ORDER TRENDS & SALES GRAPH</h3>
+      <div class="chart-wrapper">
+        <canvas id="ordersChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Customer Orders Details Table -->
+    <div class="orders-table-box">
+      <h3><i class="fa-solid fa-list-check"></i> RECENT CUSTOMER ORDERS</h3>
+      <div class="table-responsive">
+        <table class="dash-table">
+          <thead>
+            <tr>
+              <th>ORDER ID</th>
+              <th>CUSTOMER NAME</th>
+              <th>PHONE NUMBER</th>
+              <th>PRODUCT</th>
+              <th>AMOUNT</th>
+              <th>DELIVERY ADDRESS</th>
+              <th>DATE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="orders-table-body">
+            <!-- Dynamic Order Rows Will Be Inserted Here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT FORM MODAL -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-box">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <div class="modal-header-icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <h2>CHECKOUT FORM</h2>
+      <p id="modal-product-title" class="modal-prod-name">Product Name</p>
+      <h3 id="modal-product-price" class="modal-prod-price">Rs. 0</h3>
+
+      <form id="orderForm" onsubmit="processOrder(event)">
+        <div class="form-group">
+          <label><i class="fa-solid fa-user"></i> Full Name (مکمل نام)</label>
+          <input type="text" id="custName" placeholder="e.g. Ali Raza" required>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fa-solid fa-phone"></i> Mobile / WhatsApp Number (نمبر)</label>
+          <input type="tel" id="custPhone" placeholder="03001234567" required>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fa-solid fa-house"></i> Full Home Address (گھر کا مکمل پتہ)</label>
+          <textarea id="custAddress" rows="3" placeholder="House #, Street #, Sector/Area, City" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label><i class="fa-solid fa-wallet"></i> Payment Method</label>
+          <select id="custPayment">
+            <option value="Cash on Delivery">Cash on Delivery (COD)</option>
+            <option value="EasyPaisa (03015228759)">EasyPaisa (03015228759)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-whatsapp-direct">
+          <i class="fa-brands fa-whatsapp"></i> CONFIRM ORDER & SEND TO WHATSAPP
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <h2 class="logo">CYBER<span>CRAFT</span></h2>
+      <p>Official Contact & EasyPaisa: <strong>03015228759</strong></p>
+      <p class="copyright">© 2026 CyberCraft Labs. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
